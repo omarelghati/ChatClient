@@ -3278,7 +3278,7 @@ Copyright (c) 2015 Daniel Eden
     height: 100%;
     left: 0;
     top: 0;
-    background: url('../../assets/photo_bg.jpg') no-repeat center center fixed;
+    background: url('../../assets/photo_bg.png') no-repeat center center fixed;
     background-size: cover;
     font-size: 16px;
     font-family: 'Lato', sans-serif;

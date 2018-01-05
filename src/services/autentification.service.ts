@@ -22,7 +22,7 @@ export class AuthentificationService {
     }
     getUserData(id:number) {
         return this.http.get(this.baseUrl+"api/user/getData/"+id)
-            .map(res => res);
+            .map(res => res.json());
     }
     getId() { return AuthentificationService.id; }
 

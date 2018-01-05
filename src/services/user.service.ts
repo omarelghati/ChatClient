@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
-import 'rxjs';
+// tslint:disable-next-line:import-blacklist
+
+import 'rxjs/add/operator/map';
 @Injectable()
 export class UserService {
     private baseUrl:string="http://localhost:50000/";

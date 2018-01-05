@@ -26,12 +26,14 @@ export class FriendsComponent  {
     ngOnInit() {
         var local = localStorage.getItem('currentUser');
         this.auth.checkCredentials();
-        if (local != null)
+        if (local != null)  {
             this.curentUser = JSON.parse(local);
-        this.user.getFriends(this.curentUser.id).subscribe((r) => { this.received = r.received; this.sent = r.sent; this.friends = r.friends; console.log(r); });
-        this.user.getUsers(this.curentUser.id).subscribe(response => this.users = response);
+            this.user.getFriends(this.curentUser.id).subscribe((r) => { this.received = r.received; this.sent = r.sent; this.friends = r.friends; console.log(r); });
+            this.user.getUsers(this.curentUser.id).subscribe(response => this.users = response);
+            }
     }
     SendRequest(idReceiver: number) {
+        console.log(this.curentUser);
         this.user.SendRequest(this.curentUser.id, idReceiver).subscribe(res => console.log(res));
     }
     

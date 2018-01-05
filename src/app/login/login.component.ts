@@ -23,8 +23,8 @@ export class LoginComponent implements OnInit {
             if (res.json() == "UserNotFound")
                 this.wrong = true;
             else {
-                console.log(res);
-                localStorage.setItem('currentUser', JSON.stringify(res));
+                console.log(res.json());
+                localStorage.setItem('currentUser', JSON.stringify(res.json()));
                 console.log(res);
                 this.router.navigate(["/friends"]);
             }
